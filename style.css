@@ -16,6 +16,7 @@
     --max: 1180px;
 }
 
+
 * {
     box-sizing: border-box;
 }
@@ -78,6 +79,8 @@ header {
     background: rgba(244, 243, 241, 0.76);
     border-bottom: 1px solid var(--line);
 }
+
+
 
 .nav {
     display: flex;
@@ -201,6 +204,7 @@ header {
     font-weight: 700;
 }
 
+
 h1,
 h2,
 h3 {
@@ -208,7 +212,11 @@ h3 {
 }
 
 h1 {
-    font-family: Georgia, "Times New Roman", serif;
+    font-size: .8rem;
+    color: var(--accent-strong);
+    margin-top: 25px;
+    margin-bottom: 14px;
+    font-family: "Meow Script", cursive;
     font-size: clamp(2.6rem, 5vw, 5rem);
     line-height: .94;
     margin-bottom: 18px;
@@ -286,6 +294,7 @@ h1 {
     background: rgba(255, 255, 255, .9);
     border: 1px solid var(--line);
     box-shadow: var(--shadow);
+    
 }
 
 section {
@@ -464,8 +473,13 @@ section {
 .parallax-media {
     background:
         linear-gradient(rgba(156, 135, 184, .18), rgba(185, 216, 191, .18)),
-        url('fotos/foto_inicial.png') center/cover no-repeat;
-    transform: scale(1.15);
+        url('fotos/foto_inicial.png') no-repeat center top;
+
+    background-size: cover;
+
+    transform: scale(1.1);
+    transform-origin: top center;
+
     will-change: transform;
 }
 
@@ -918,6 +932,7 @@ footer {
 .casal-dots span.active {
     background: #b8a4c8;
 }
+
 .menu-toggle {
     display: none;
     width: 48px;
@@ -991,4 +1006,43 @@ footer {
     .menu-toggle.is-open span:nth-child(3) {
         transform: translateY(-7px) rotate(-45deg);
     }
+}
+.save-date {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid var(--line);
+    border-radius: 18px;
+
+    padding: 14px 18px;
+
+    box-shadow: 0 10px 25px rgba(70, 60, 80, 0.12);
+
+    text-align: left;
+}
+
+.save-label {
+    font-family: "Figtree", sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: var(--accent-strong);
+    margin-bottom: 6px;
+}
+
+.save-day {
+    font-family: "Meow Script", cursive;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+}
+
+.hero-photo-card {
+    position: relative;
 }

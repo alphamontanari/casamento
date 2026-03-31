@@ -14,7 +14,13 @@
   <header>
     <div class="container nav">
       <div class="brand">André & Bruna</div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <nav class="nav-links">
+        <a href="#local">Local</a>
         <a href="#historia">História</a>
         <a href="#momentos">Momentos</a>
         <a href="#sonhos">Sonhos</a>
@@ -147,27 +153,44 @@
       </div>
     </section>
 
-    <section>
+    <section id="local">
       <div class="container">
         <div class="parallax-banner reveal">
           <div class="parallax-media" id="bannerParallax"></div>
           <div class="parallax-overlay"></div>
+
           <div class="parallax-content">
+
+            <!-- FOTO DO LOCAL -->
+            <div class="photo-box" style="max-width: 520px; margin-bottom: 24px;">
+              <img src="fotos/local.jpg" alt="Local do casamento">
+            </div>
+            <!-- DATA E LOCAL -->
+            <p style="margin-top: 20px; font-weight: 500; font-size: 14pt;">
+              📅 <strong style="font-size: 22pt;">02 de maio de 2026</strong><br>
+              📍 Pão de Ló<br>
+              Av. Dr. José Ozi, Center Park
+            </p>
+
             <div class="eyebrow">Capítulo especial</div>
+
             <div class="quote">
               “Vinte anos juntos não são apenas tempo. São escolha, cuidado, cumplicidade e uma coleção de sonhos que
               continua crescendo.”
             </div>
+
             <p>
               Esta celebração é mais do que um evento. É um marco de tudo o que já foi construído e uma forma bonita
               de abrir espaço para o que ainda vem: novas viagens, novos encontros, fotografias inesquecíveis e um dia
               cercado de gente querida.
             </p>
+
+            
+
           </div>
         </div>
       </div>
     </section>
-
     <section id="sonhos">
       <div class="container">
         <div class="section-head reveal">
@@ -315,20 +338,20 @@
 
         <div class="footer-card glass reveal">
           <div class="casal-slider">
-          <div class="casal-slides">
-            <img src="fotos/primeiro_ano.png" class="casal-slide active">
-            <img src="fotos/bru_faby.png" class="casal-slide">
-            <img src="fotos/amigos.png" class="casal-slide">
-            <img src="fotos/familia.jpeg" class="casal-slide">
-            <img src="fotos/carlos_e_amanda.jpeg" class="casal-slide">
-            <img src="fotos/bruna_familia.jpeg" class="casal-slide">
+            <div class="casal-slides">
+              <img src="fotos/primeiro_ano.png" class="casal-slide active">
+              <img src="fotos/bru_faby.png" class="casal-slide">
+              <img src="fotos/amigos.png" class="casal-slide">
+              <img src="fotos/familia.jpeg" class="casal-slide">
+              <img src="fotos/carlos_e_amanda.jpeg" class="casal-slide">
+              <img src="fotos/bruna_familia.jpeg" class="casal-slide">
+            </div>
+
+            <button class="casal-prev">&#10094;</button>
+            <button class="casal-next">&#10095;</button>
+
+            <div class="casal-dots"></div>
           </div>
-
-          <button class="casal-prev">&#10094;</button>
-          <button class="casal-next">&#10095;</button>
-
-          <div class="casal-dots"></div>
-        </div>
           <div class="eyebrow">Família e Amigos</div>
           <p>
             Entre família e amigos, encontramos o verdadeiro significado do amor.
@@ -339,7 +362,7 @@
           </p>
 
         </div>
-        
+
       </div>
     </section>
   </main>

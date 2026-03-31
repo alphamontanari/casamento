@@ -369,3 +369,31 @@ copyCodeBtn.addEventListener("click", async () => {
   showSlide(0);
 
 })();
+(function () {
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (!menuToggle || !navLinks) return;
+
+  menuToggle.addEventListener("click", function () {
+    const isOpen = navLinks.classList.toggle("is-open");
+    menuToggle.classList.toggle("is-open", isOpen);
+    menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", function () {
+      navLinks.classList.remove("is-open");
+      menuToggle.classList.remove("is-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 760) {
+      navLinks.classList.remove("is-open");
+      menuToggle.classList.remove("is-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    }
+  });
+})();

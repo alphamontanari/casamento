@@ -1046,3 +1046,31 @@ footer {
 .hero-photo-card {
     position: relative;
 }
+
+
+.gift-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.gift-ribbon {
+    position: absolute;
+    top: 22px;
+    right: -48px;
+    z-index: 6;
+
+    width: 180px;
+    padding: 8px 0;
+
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: #fff;
+
+    background: linear-gradient(135deg, #d62828, #b71c1c);
+    box-shadow: 0 8px 18px rgba(120, 0, 0, 0.28);
+
+    transform: rotate(38deg);
+}
